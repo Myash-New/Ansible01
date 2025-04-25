@@ -1,0 +1,22 @@
+---
+  el:
+    hosts:
+      centos7:
+        ansible_connection: docker
+        ansible_host: playbook_host2_1
+        ansible_user: root
+        ansible_python_interpreter: /usr/bin/python
+  deb:
+    hosts:
+      ubuntu:
+        ansible_connection: docker
+        ansible_host: playbook_host1_1
+        ansible_user: root
+        ansible_python_interpreter: /usr/bin/python3
+
+  local:
+    hosts:
+      localhost:
+        ansible_connection: local
+        ansible_user: myash
+        ansible_python_interpreter: /usr/bin/python3
